@@ -33,8 +33,6 @@ public class User implements UserDetails {
     private String provincia;
     private String localidad;
     //Relacion bidireccional 1:1 con tabla expert
-    @OneToOne(mappedBy="user")
-    private Expert expert;
     @ManyToMany(fetch = FetchType.EAGER,cascade = {
             CascadeType.PERSIST,
             CascadeType.MERGE
@@ -45,6 +43,8 @@ public class User implements UserDetails {
 
             ))
     private List<Services> servicio;
+    @OneToMany(fetch = FetchType.EAGER,mappedBy = "user",cascade = CascadeType.ALL,orphanRemoval = true)
+    private List<Services> services;
     private String role;
 
     @Override

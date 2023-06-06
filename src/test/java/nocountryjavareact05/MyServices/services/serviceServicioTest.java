@@ -1,5 +1,6 @@
 package nocountryjavareact05.MyServices.services;
 
+import nocountryjavareact05.MyServices.dto.MostrarServiciosDto;
 import nocountryjavareact05.MyServices.entidades.Expert;
 import nocountryjavareact05.MyServices.entidades.User;
 import org.junit.jupiter.api.Test;
@@ -13,9 +14,8 @@ class serviceServicioTest {
 private serviceServicio servicio;
     @Test
     void getAllUsers() {
-        for(Expert expert:servicio.findExperts(1L)){
-            System.out.println("expert.getName() = " + expert.getName());
-            System.out.println("expert.getId() = " + expert.getId());
+        for(MostrarServiciosDto serviciosDto:servicio.mostrarServiciosDeTodosLosUsuarios()){
+            System.out.println("serviciosDto.getTitulo() = " + serviciosDto.getTitulo());
         }
     }
 

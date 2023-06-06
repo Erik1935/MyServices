@@ -26,6 +26,7 @@ public class Category implements Serializable {
     private String name;
     @Size(max = 255)
     private String description;
+    private String image;
     //Relacion bidireccional con services
     @OneToMany(fetch = FetchType.EAGER,mappedBy = "category",cascade = CascadeType.ALL,orphanRemoval = true)
     private List<Services> services;

@@ -1,6 +1,5 @@
 package nocountryjavareact05.MyServices.security.config;
 
-
 import lombok.RequiredArgsConstructor;
 import nocountryjavareact05.MyServices.repositories.UserRepository;
 import org.springframework.context.annotation.Bean;
@@ -28,7 +27,7 @@ public class ApplicationConfig {
   }
 
   @Bean
-  public AuthenticationProvider authenticationProvider() {
+  AuthenticationProvider authenticationProvider() {
     DaoAuthenticationProvider authProvider = new DaoAuthenticationProvider();
     authProvider.setUserDetailsService(userDetailsService());
     authProvider.setPasswordEncoder(passwordEncoder());
@@ -36,12 +35,12 @@ public class ApplicationConfig {
   }
 
   @Bean
-  public AuthenticationManager authenticationManager(AuthenticationConfiguration config) throws Exception {
+  AuthenticationManager authenticationManager(AuthenticationConfiguration config) throws Exception {
     return config.getAuthenticationManager();
   }
 
   @Bean
-  public PasswordEncoder passwordEncoder() {
+  PasswordEncoder passwordEncoder() {
     return new BCryptPasswordEncoder();
   }
 

@@ -1,3 +1,14 @@
+/*
+ * Decompiled with CFR 0.150.
+ * 
+ * Could not load the following classes:
+ *  jakarta.servlet.http.HttpServletRequest
+ *  jakarta.servlet.http.HttpServletResponse
+ *  nocountryjavareact05.MyServices.security.auth.LogoutController
+ *  org.springframework.security.core.Authentication
+ *  org.springframework.security.core.context.SecurityContextHolder
+ *  org.springframework.security.web.authentication.logout.SecurityContextLogoutHandler
+ */
 package nocountryjavareact05.MyServices.security.auth;
 
 import jakarta.servlet.http.HttpServletRequest;
@@ -14,3 +25,4 @@ public class LogoutController {
         }
     }
 }
+

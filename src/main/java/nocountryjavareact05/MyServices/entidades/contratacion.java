@@ -14,7 +14,6 @@ public class contratacion {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
     @ManyToOne
     @JoinColumn(name = "servicio_id")
     private Services services;

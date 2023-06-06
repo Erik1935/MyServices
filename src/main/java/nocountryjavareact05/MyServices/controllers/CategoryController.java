@@ -1,8 +1,11 @@
 package nocountryjavareact05.MyServices.controllers;
 
+
 import lombok.AllArgsConstructor;
+import nocountryjavareact05.MyServices.dto.CategoryDto;
 import nocountryjavareact05.MyServices.entidades.Category;
 import nocountryjavareact05.MyServices.services.CategoryService;
+import nocountryjavareact05.MyServices.services.ServiceCategory;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -12,12 +15,14 @@ import java.util.List;
 @AllArgsConstructor
 public class CategoryController {
     private CategoryService categoryService;
+    private final ServiceCategory serviceCategory;
+
     @GetMapping("")
-    public List<Category> findAll(){
-        return categoryService.findAll();
+    public List<CategoryDto> findAll(){
+        return serviceCategory.getAllCategories();
     }
     @GetMapping("/category/{id}")
-    public Category findById(@PathVariable Long id){
+    public Category findById(@PathVariable Long id) {
         return categoryService.findById(id);
     }
 
