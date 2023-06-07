@@ -193,26 +193,26 @@ public class Datos implements CommandLineRunner {
         CreateServiceDto createServiceDto = new CreateServiceDto();
         createServiceDto.setTitulo("Servicio de construccion ");
         createServiceDto.setDescripcion("Se hacen planos y presupuestos, pregunte sin compromiso");
-        createServiceDto.setCategoria(1L);
-        createServiceDto.setId(2L);
+        createServiceDto.setCategoria(1);
+        createServiceDto.setId(2);
         serviceServicio.createExpertService(createServiceDto);
         CreateServiceDto createServiceDto1 = new CreateServiceDto();
         createServiceDto1.setTitulo("Levantamiento de barda");
         createServiceDto1.setDescripcion("Requiero de un profesional para realizar el trabajo");
-        createServiceDto1.setCategoria(1L);
-        createServiceDto1.setId(2L);
+        createServiceDto1.setCategoria(1);
+        createServiceDto1.setId(2);
         serviceServicio.createUserService(createServiceDto1);
         CreateServiceDto createServiceDto2 = new CreateServiceDto();
         createServiceDto2.setTitulo("Construccion");
         createServiceDto2.setDescripcion("Se hacen planos y presupuestos, pregunte sin compromiso");
-        createServiceDto2.setCategoria(1L);
-        createServiceDto2.setId(3L);
+        createServiceDto2.setCategoria(1);
+        createServiceDto2.setId(3);
         serviceServicio.createExpertService(createServiceDto2);
         CreateServiceDto createServiceDto3 = new CreateServiceDto();
         createServiceDto3.setTitulo("Trabajos de carpinteria profesional");
         createServiceDto3.setDescripcion("Carpinteria en general");
-        createServiceDto3.setCategoria(2L);
-        createServiceDto3.setId(3L);
+        createServiceDto3.setCategoria(2);
+        createServiceDto3.setId(3);
         serviceServicio.createExpertService(createServiceDto3);
 
     }
