@@ -12,7 +12,7 @@ public class CreateServiceDto {
     @Size(max = 255)
     private String descripcion;
     //Relacion bidireccional con category
-    private Long categoria;
-    private Long id;
+    private int categoria;
+    private int id;
 
 }

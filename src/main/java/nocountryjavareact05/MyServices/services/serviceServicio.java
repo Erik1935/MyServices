@@ -96,14 +96,14 @@ public class serviceServicio {
         services.setName(serviceDto.getTitulo());
         services.setDescription(serviceDto.getDescripcion());
         //Category
-        category.setId(serviceDto.getCategoria());
+        category.setId(Long.valueOf(serviceDto.getCategoria()));
         services.setCategory(category);
         //User
         user.setId(1L);
        services.setUser(user);
         //Experto
         Expert experto = new Expert();
-        experto.setId(serviceDto.getId());
+        experto.setId(Long.valueOf(serviceDto.getId()));
         services.setExperto(experto);
         services.setActivo(1);
         service.save(services);
@@ -116,11 +116,11 @@ public class serviceServicio {
         services.setName(serviceDto.getTitulo());
         services.setDescription(serviceDto.getDescripcion());
         //Category
-        category.setId(serviceDto.getCategoria());
+        category.setId(Long.valueOf(serviceDto.getCategoria()));
         services.setCategory(category);
         //User
         //user.setId(serviceDto.getId());
-        user.setId(serviceDto.getId());
+        user.setId(Long.valueOf(serviceDto.getId()));
         services.setUser(user);
         //Experto
         Expert experto = new Expert();
